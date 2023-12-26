@@ -8,10 +8,10 @@ import { toast } from "react-toastify";
 import ComponentLevelLoader from "../Loader/componentlevel";
 import { useRouter } from "next/navigation";
 
-export default function Cartmodel() {
+export default function CartModel() {
   const {
-    showCartmodel,
-    setShowCartmodel,
+    showCartModel,
+    setShowCartModel,
     cartItems,
     setCartItems,
     user,
@@ -76,8 +76,8 @@ export default function Cartmodel() {
   return (
     <CommonModel
       showButtons={true}
-      show={showCartmodel}
-      setShow={setShowCartmodel}
+      show={showCartModel}
+      setShow={setShowCartModel}
       mainContent={
         cartItems && cartItems.length ? (
           <ul role="list" className="-my-6 divide-y divide-gray-300">
@@ -145,7 +145,7 @@ export default function Cartmodel() {
             type="button"
             onClick={() => {
               router.push("/cart");
-              setShowCartmodel(false);
+              setShowCartModel(false);
             }}
             className="mt-1.5 w-full inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide"
           >
@@ -156,7 +156,7 @@ export default function Cartmodel() {
             type="button"
             onClick={() => {
               router.push("/checkout");
-              setShowCartmodel(false);
+              setShowCartModel(false);
             }}
             className="mt-1.5 w-full inline-block bg-black text-white px-5 py-3 text-xs font-medium uppercase tracking-wide disabled:opacity-50"
           >

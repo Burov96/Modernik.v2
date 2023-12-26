@@ -12,7 +12,7 @@ export default function CommonDetails({ item }) {
     setComponentLevelLoader,
     componentLevelLoader,
     user,
-    setShowCartmodel,
+    setShowCartModel,
   } = useContext(GlobalContext);
 
   async function handleAddToCart(getItem) {
@@ -25,13 +25,13 @@ export default function CommonDetails({ item }) {
         position: toast.POSITION.TOP_RIGHT,
       });
       setComponentLevelLoader({ loading: false, id: "" });
-      setShowCartmodel(true);
+      setShowCartModel(true);
     } else {
       toast.error(res.message, {
         position: toast.POSITION.TOP_RIGHT,
       });
       setComponentLevelLoader({ loading: false, id: "" });
-      setShowCartmodel(true);
+      setShowCartModel(true);
     }
   }
 

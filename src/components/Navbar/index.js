@@ -6,7 +6,7 @@ import { Fragment, useContext, useEffect } from "react";
 import CommonModel from "../CommonModel";
 import Cookies from "js-cookie";
 import { usePathname, useRouter } from "next/navigation";
-import Cartmodel from "../Cartmodel";
+import CartModel from "../CartModel";
 
 function NavItems({ ismodelView = false, isAdminView, router }) {
   return (
@@ -54,8 +54,8 @@ export default function Navbar() {
     setUser,
     currentUpdatedProduct,
     setCurrentUpdatedProduct,
-    showCartmodel,
-    setShowCartmodel
+    showCartModel,
+    setShowCartModel
   } = useContext(GlobalContext);
 
   const pathName = usePathname();
@@ -108,7 +108,7 @@ export default function Navbar() {
                   className={
                     "mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium upprcase tracking-wide text-white uppercase"
                   }
-                  onClick={()=> setShowCartmodel(true)}
+                  onClick={()=> setShowCartModel(true)}
                 >
                   Количка 🛒
                 </button>
@@ -193,7 +193,7 @@ export default function Navbar() {
         show={showNavmodel}
         setShow={setShowNavmodel}
       />
-      {showCartmodel && <Cartmodel />}
+      {showCartModel && <CartModel />}
     </>
   );
 }

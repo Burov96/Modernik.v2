@@ -15,7 +15,7 @@ export default function ProductButton({ item }) {
     setComponentLevelLoader,
     componentLevelLoader,
     user,
-    showCartmodel, setShowCartmodel
+    showCartModel, setShowCartModel
   } = useContext(GlobalContext);
   const router = useRouter();
 
@@ -50,13 +50,13 @@ export default function ProductButton({ item }) {
         position: toast.POSITION.TOP_RIGHT,
       });
       setComponentLevelLoader({ loading: false, id: "" });
-      setShowCartmodel(true);
+      setShowCartModel(true);
     } else {
       toast.error(res.message, {
         position: toast.POSITION.TOP_RIGHT,
       });
       setComponentLevelLoader({ loading: false, id: "" });
-      setShowCartmodel(true)
+      setShowCartModel(true)
     }
 
     console.log(res);

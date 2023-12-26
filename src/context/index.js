@@ -33,7 +33,7 @@ export default function GlobalState({ children }) {
   const [isAuthUser, setIsAuthUser] = useState(null);
   const [user, setUser] = useState(null);
   const [currentUpdatedProduct, setCurrentUpdatedProduct] = useState(null);
-  const [showCartmodel, setShowCartmodel] = useState(false);
+  const [showCartModel, setShowCartModel] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   const [addresses, setAddresses] = useState([]);
   const [addressFormData, setAddressFormData] = useState({
@@ -106,8 +106,8 @@ export default function GlobalState({ children }) {
         setComponentLevelLoader,
         currentUpdatedProduct,
         setCurrentUpdatedProduct,
-        showCartmodel,
-        setShowCartmodel,
+        showCartModel,
+        setShowCartModel,
         cartItems,
         setCartItems,
         addresses,
